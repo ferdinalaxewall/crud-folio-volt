@@ -25,7 +25,7 @@
             <!-- Sidebar -->
             <x-widgets.sidebar />
     
-            <main class="p-4 md:ml-64 h-auto pt-24">
+            <main class="p-4 md:ml-64 h-auto pt-24 min-h-screen">
                 {{ $slot }}
             </main>
         </div>
