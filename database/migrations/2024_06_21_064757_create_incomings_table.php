@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('incomings', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('product_id')
+                ->references('id')
+                ->on('products')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+            $table->integer('amount')->default(0);
+            $table->date('incoming_date');
             $table->timestamps();
         });
     }
